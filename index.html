@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b14" />
+    <meta
+      name="description"
+      content="AVA is a calm, helpful personal AI assistant in a polished text chat experience."
+    />
+    <title>AVA — Your Personal AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <section class="assistant-card" aria-label="AVA personal assistant">
+        <header class="topbar">
+          <div class="brand">
+            <div class="avatar" aria-hidden="true">
+              <span class="avatar-core"></span>
+            </div>
+            <div>
+              <div class="brand-row">
+                <h1>AVA</h1>
+                <span class="status-dot" title="AVA is ready"></span>
+              </div>
+              <p>Your Personal AI Assistant</p>
+            </div>
+          </div>
+
+          <button class="clear-button" id="clearButton" type="button" aria-label="Clear conversation">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5" />
+            </svg>
+            <span>Clear</span>
+          </button>
+        </header>
+
+        <div class="chat-window" id="chatWindow" aria-live="polite" aria-label="Conversation">
+          <div class="date-divider"><span>Today</span></div>
+          <div class="messages" id="messages"></div>
+          <div class="typing-indicator" id="typingIndicator" aria-label="AVA is typing" hidden>
+            <div class="message-avatar mini-avatar"><span></span></div>
+            <div class="typing-bubble"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+
+        <footer class="composer-area">
+          <div class="voice-note" id="voiceNote" role="status">Voice coming soon</div>
+          <form class="composer" id="chatForm">
+            <button
+              class="icon-button mic-button"
+              id="micButton"
+              type="button"
+              aria-label="Voice input — coming soon"
+              aria-describedby="voiceNote"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="3" width="6" height="11" rx="3" />
+                <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21m-3 0h6" />
+              </svg>
+            </button>
+            <label class="sr-only" for="messageInput">Message AVA</label>
+            <input
+              id="messageInput"
+              name="message"
+              type="text"
+              placeholder="Ask AVA anything..."
+              autocomplete="off"
+              maxlength="1000"
+            />
+            <button class="send-button" id="sendButton" type="submit" aria-label="Send message">
+              <span>Send</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m5 12 14-7-4.5 14-2.8-5.2L5 12Zm6.7 1.8L19 5" />
+              </svg>
+            </button>
+          </form>
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 10V7a4 4 0 0 1 8 0v3m-9 0h10v9H7v-9Z" /></svg>
+            Your conversation stays on this device
+          </p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
