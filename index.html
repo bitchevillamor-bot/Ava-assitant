@@ -31,18 +31,26 @@
             <div>
               <div class="brand-row">
                 <h1>AVA</h1>
-                <span class="status-dot" title="AVA is ready"></span>
+                <span class="status-dot" id="statusDot" aria-hidden="true"></span>
               </div>
-              <p>Your Personal AI Assistant</p>
+              <p>Boss Allan’s Personal Assistant</p>
             </div>
           </div>
 
-          <button class="clear-button" id="clearButton" type="button" aria-label="Clear conversation">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5" />
-            </svg>
-            <span>Clear</span>
-          </button>
+          <div class="header-actions">
+            <div class="status-badge" id="statusBadge" role="status" aria-live="polite">
+              <span class="status-badge-dot" aria-hidden="true"></span>
+              <span id="statusText">AVAILABLE</span>
+              <small>Asia/Manila</small>
+            </div>
+
+            <button class="clear-button" id="clearButton" type="button" aria-label="Clear conversation">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5" />
+              </svg>
+              <span>Clear</span>
+            </button>
+          </div>
         </header>
 
         <div class="chat-window" id="chatWindow" aria-live="polite" aria-label="Conversation">
