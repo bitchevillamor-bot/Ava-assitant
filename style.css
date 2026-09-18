@@ -61,6 +61,12 @@ body::before {
 .brand h1 { margin: 0; font: 700 20px/1 "Manrope", sans-serif; letter-spacing: .13em; }
 .brand p { margin: 5px 0 0; color: var(--muted); font-size: 12px; letter-spacing: .02em; }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #5ae5c1; box-shadow: 0 0 12px #5ae5c1; }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.status-badge { display: grid; grid-template-columns: auto auto; align-items: center; column-gap: 7px; padding: 7px 10px; border: 1px solid var(--border); border-radius: 10px; color: #cdd5e7; font: 600 10px/1 "Manrope", sans-serif; letter-spacing: .08em; }
+.status-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #5ae5c1; box-shadow: 0 0 9px #5ae5c1; }
+.status-badge small { grid-column: 2; margin-top: 4px; color: var(--muted); font: 400 8px/1 "DM Sans", sans-serif; letter-spacing: .03em; }
+.status-badge.busy .status-badge-dot, .status-dot.busy { background: #ffc866; box-shadow: 0 0 9px #ffc866; }
+.status-badge.sleeping .status-badge-dot, .status-dot.sleeping { background: #9f8cff; box-shadow: 0 0 9px #9f8cff; }
 
 .avatar, .message-avatar {
   display: grid;
@@ -128,6 +134,8 @@ button { color: inherit; }
   .composer-area { padding: 12px 12px max(10px, env(safe-area-inset-bottom)); }
   .bubble { max-width: 82%; }
   .clear-button span, .send-button span { display: none; }
+  .header-actions { gap: 7px; }
+  .status-badge { padding: 7px 8px; }
   .clear-button { width: 39px; height: 39px; justify-content: center; padding: 0; }
   .send-button { width: 39px; justify-content: center; padding: 0; }
   .brand p { font-size: 11px; }
